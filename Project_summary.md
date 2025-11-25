@@ -10,32 +10,32 @@ This repository contains the implementation of a partial data ingestion pipeline
 
 - Coordinate rounding (to 2 decimals) was applied to match grid precision; duplicates were resolved using mean AET values.
 
-A two-level matching approach—exact match first, then KDTree nearest-neighbor search—ensured accurate spatial alignment.
+- A two-level matching approach—exact match first, then KDTree nearest-neighbor search—ensured accurate spatial alignment.
 
-All monthly files were converted to CSVs and combined into a long-format dataset storing state, district, latitude, longitude, date, and AET.
+- All monthly files were converted to CSVs and combined into a long-format dataset storing state, district, latitude, longitude, date, and AET.
 
-The final dataset was transposed into wide format, where each row represents a month and each column represents a location.
+- The final dataset was transposed into wide format, where each row represents a month and each column represents a location.
 
 📌 Key Outputs
 
-Cleaned reference location file (state, district, latitude, longitude)
+- Cleaned reference location file (state, district, latitude, longitude)
 
-119 processed monthly AET CSV files
+- 119 processed monthly AET CSV files
 
-Consolidated long-format dataset (2015–2025)
+- Consolidated long-format dataset (2015–2025)
 
-Final wide-format AET matrix suitable for modelling, forecasting, and time-series analysis
+- Final wide-format AET matrix suitable for modelling, forecasting, and time-series analysis
 
 📌 Applications
 
-The processed dataset supports:
+- The processed dataset supports:
 
-Crop water demand analysis
+- Crop water demand analysis
 
-Moisture stress detection
+- Moisture stress detection
 
-Seasonal and long-term variability studies
+- Seasonal and long-term variability studies
 
-Integration into NPCYF (National Platform of Crop Yield Forecasting)
+- Integration into NPCYF (National Platform of Crop Yield Forecasting)
 
-Hydrological and environmental modelling workflows
+- Hydrological and environmental modelling workflows
