@@ -4,21 +4,21 @@ This repository contains the implementation of a partial data ingestion pipeline
 
 📌 Project Overview
 
-A total of 119 GeoTIFF files were obtained from BHUVAN, each representing monthly AET values across India.
+  1.A total of 119 GeoTIFF files were obtained from BHUVAN, each representing monthly AET values across India.
 
-Using metadata (CRS, extent, resolution), the raster files were processed to extract AET values for a set of target locations across 20 states and their districts.
+  2.Using metadata (CRS, extent, resolution), the raster files were processed to extract AET values for a set of target locations across 20 states and their            districts.
 
-Coordinate rounding (to 2 decimals) was applied to match grid precision; duplicates were resolved using mean AET values.
+  3.Coordinate rounding (to 2 decimals) was applied to match grid precision; duplicates were resolved using mean AET values.
 
-A two-level matching approach—exact match first, then KDTree nearest-neighbor search—ensured accurate spatial alignment.
+  4.A two-level matching approach—exact match first, then KDTree nearest-neighbor search—ensured accurate spatial alignment.
 
-All monthly files were converted to CSVs and combined into a long-format dataset storing state, district, latitude, longitude, date, and AET.
+  5.All monthly files were converted to CSVs and combined into a long-format dataset storing state, district, latitude, longitude, date, and AET.
 
-The final dataset was transposed into wide format, where each row represents a month and each column represents a location.
+  6.The final dataset was transposed into wide format, where each row represents a month and each column represents a location.
 
 📌 Key Outputs
 
-Cleaned reference location file (state, district, latitude, longitude)
+    Cleaned reference location file (state, district, latitude, longitude)
 
 119 processed monthly AET CSV files
 
